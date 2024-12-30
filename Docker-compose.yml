@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  servidor:
+    build: ./servidor
+    ports:
+      - "9001:9001"
+    networks:
+      - app_network
+
+  cliente:
+    build: ./cliente
+    depends_on:
+      - servidor
+    networks:
+      - app_network
+    stdin_open: true
+    tty: true
+
+networks:
+  app_network:
+    driver: bridge
