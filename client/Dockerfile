@@ -2,8 +2,8 @@ FROM gcc:latest
 
 WORKDIR /app
 
-COPY cliente.c /app/cliente.c
+COPY client.c /app/client.c
 
-RUN gcc -o cliente cliente.c
+RUN gcc -o cliente client.c
 
-ENTRYPOINT ["./cliente"]
+ENTRYPOINT ["./client"]

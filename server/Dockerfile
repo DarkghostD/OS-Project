@@ -2,10 +2,10 @@ FROM gcc:latest
 
 WORKDIR /app
 
-COPY servidor.c /app/servidor.c
+COPY server.c /app/server.c
 
-RUN gcc -o servidor servidor.c
+RUN gcc -o server server.c
 
 EXPOSE 9001
 
-ENTRYPOINT ["./servidor"]
+ENTRYPOINT ["./server"]
