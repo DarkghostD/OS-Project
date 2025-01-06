@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY client.c /app/client.c
 
-RUN gcc -o cliente client.c
+RUN gcc -o client client.c
 
 ENTRYPOINT ["./client"]
